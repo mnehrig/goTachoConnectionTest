@@ -19,6 +19,7 @@ const cardServerAddress string = "http://localhost:8080"
 
 func init() {
 	flag.Parse()
+	serialOptions.PortName = *serialPort
 	if *debug {
 		log.SetLevel(log.DebugLevel)
 	} else {
@@ -29,6 +30,7 @@ func main() {
 
 	//
 	// Open Port
+	// println(serialOptions.PortName)
 	port, err := serial.Open(serialOptions)
 
 	if err != nil {

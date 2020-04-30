@@ -6,7 +6,7 @@ import (
 
 var (
 	serialOptions serial.OpenOptions = serial.OpenOptions{
-		PortName:        *serialPort,
+		PortName:        "TEST",
 		BaudRate:        115200,
 		DataBits:        8,
 		StopBits:        1,
